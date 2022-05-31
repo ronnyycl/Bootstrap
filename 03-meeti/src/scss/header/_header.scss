@@ -1,7 +1,12 @@
 @use '../custom' as *;
 
 .header {
-
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    @include media-breakpoint-up (md){       /* Forma de declarar que quiero usar este mixins */
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
     .logo {
         width: 10rem;
     }
