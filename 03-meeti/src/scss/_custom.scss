@@ -1,0 +1,17 @@
+// Rescribir Variables de Bootstrap
+
+$rojo: #F34F51;
+$verde: #0098AE;
+$oscuro: #212121;
+
+// Asignaras paraletas de colores a Bootstrap
+
+$secondary: $verde;
+$primary: $rojo;
+$dark: $oscuro;
+
+// Tipografia
+
+$display-font-weight: 900;
+// Importart Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
