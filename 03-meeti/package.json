@@ -4,7 +4,8 @@
   "description": "Aprendiendo Bootstrap 5 y SASS",
   "main": "index.js",
   "scripts": {
-    "compilar:sass": "sass --watch src/scss:build/css"
+    "compilar:sass": "sass --watch src/scss:build/css",
+    "build:sass": "purgecss --css build/css/styles.css --content index.html --output build/css/meeti.css"                                        
   },
   "author": "Yoraco",
   "license": "ISC",
