@@ -1,0 +1,11 @@
+{
+  "name": "04-podcastapp",
+  "version": "1.0.0",
+  "description": "Boostrap 5, Sass y Gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yoraco",
+  "license": "ISC"
+}
