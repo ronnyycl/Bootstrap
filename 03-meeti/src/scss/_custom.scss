@@ -1,8 +1,9 @@
 // Rescribir Variables de Bootstrap
-
 $rojo: #F34F51;
 $verde: #0098AE;
 $oscuro: #212121;
+$gris: #B5B5B5;
+
 
 // Asignaras paraletas de colores a Bootstrap
 
@@ -14,6 +15,16 @@ $dark: $oscuro;
 
 $display-font-weight: 900;
 $headings-font-weight:  900;
+
+// Cards
+
+$card-border-color: transparent;
+
+//Nav Link
+$nav-link-padding-x: 0;
+$nav-link-color: $gris;
+$nav-link-hover-color: darken($gris, 10%);
+
 
 // Importart Bootstrap
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
