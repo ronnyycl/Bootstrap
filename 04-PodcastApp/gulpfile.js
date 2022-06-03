@@ -41,3 +41,4 @@ exports.default = series( imagenes, css, dev );
 
 // comando: gulp dev -- para compilar
 // comando: gulp imagenes -- para aligerar imagenes
+// comando: gulp -- para ejecutar series
