@@ -14,8 +14,8 @@ const imagemin = require('gulp-imagemin');
 function css ( done ) {
     // Identificar archivo principal
     src('src/scss/app.scss')
-    .pipe( sass() )      // Compilar SASS
-    .pipe( dest('build/css') )              // Exportarlo o guardarlo en una ubicacion
+        .pipe( sass() )      // Compilar SASS
+        .pipe( dest('build/css') )              // Exportarlo o guardarlo en una ubicacion
 
     // 'pipe': es necesario para buscar la ruta y compilar sass
 

@@ -1,5 +1,16 @@
-$rojo: red;
+@use '../custom' as *;
+@use 'utils/mixins';
 
-body {
-    background-color: $rojo;
+.side-header {
+    @include mixins.bgImage('../img/header.jpg', $secondary);
+
+    .logo {
+        max-width: 20rem;
+    }
+    .contenido {
+        
+        h1 {
+
+        }
+    }
 }
