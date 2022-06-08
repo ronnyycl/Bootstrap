@@ -15,3 +15,12 @@
     }
    
 }
+
+.boton-plan {
+    @extend .btn-header;
+    border: 1px solid $white;
+
+    @include media-breakpoint-up(md) {
+        display: block;
+    }
+}

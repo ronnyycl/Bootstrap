@@ -1,0 +1,51 @@
+@use '../custom' as *;
+@use 'utils/mixins';
+
+$separacion: 5rem;      /* Variable Local */
+
+.planes {
+    h2 {
+        @include mixins.headingBorder($white, $primary);
+    }
+}
+
+.plan {
+    padding: 16rem 4rem 4rem 4rem;
+    border-bottom: 1px solid #e1e1e1;
+
+    @include media-breakpoint-up(md) {
+        border-bottom: none;
+        @include transition(transform 300ms ease);
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    .precio {
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &.inicio {
+        @include mixins.bgIcono('../img/icono_inicio.svg');
+    }
+
+    &.negocio {                     /* Simbolo & para que plan y negocio esten juntas en un mismo elemento */
+        @include mixins.bgIcono('../img/icono_negocio.svg');
+        @include media-breakpoint-up(md) {
+            margin-top: -#{$separacion};
+            margin-bottom: -#{$separacion};
+            border-radius: 2rem;
+            z-index: 100;
+            padding-top: calc(16rem + #{$separacion}) ;       /* Alineacion de texto de Negocios con el resto en eje-x */
+            background-position-y: 50% calc(2rem + #{$separacion}); /* Alineacion de Icono en el eje-x con el resto 'mixins' */
+        }
+    }
+
+    /* {$variable}: interpolacion */
+
+    &.pro {
+        @include mixins.bgIcono('../img/icono_pro.svg');
+    }
+}
