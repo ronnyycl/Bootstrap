@@ -6,6 +6,8 @@ const sass = require('gulp-sass')(require('sass'));
 // dest: usada para almacenar los archivos
 // watch: tomara un archivo para revisar los cambios constantes
 // series: ejecuta multiples tareas al mismo tiempo
+const purgecss = require('gulp-purgecss');
+const rename = require('gulp-rename');
 
 // Imagenes
 const imagemin = require('gulp-imagemin');
@@ -23,6 +25,21 @@ function css ( done ) {
 
 }
 
+function cssbuild ( done ) {
+    src('build/css/app.css')
+        .pipe( rename({
+            suffix: '.min'                  
+        }))
+        .pipe ( purgecss({
+            content: ['index.html']
+        }))
+        .pipe ( dest('build/css'))    
+
+    done();
+}
+
+// 'suffix': que nombre se le va ha agregar despues del nombre a este archivo
+
 function dev( ) {
     watch('src/scss/**/*.scss', css);       // Arg-1: direccion del archivo a revisar; Arg-2: funcion ha ejecutar
 }
@@ -38,6 +55,7 @@ exports.css = css;
 exports.dev = dev;
 exports.imagenes = imagenes;
 exports.default = series( imagenes, css, dev );
+exports.build = series( cssbuild );
 
 // comando: gulp dev -- para compilar
 // comando: gulp imagenes -- para aligerar imagenes
